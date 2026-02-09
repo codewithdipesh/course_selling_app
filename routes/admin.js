@@ -1,5 +1,6 @@
 const {Router}= require('express');
 const adminRouter = Router();
+const {adminModel} = require("../db");
 
 adminRouter.post('/create-course', (req, res) => {
     res.json({ message: "Course created successfully" });
