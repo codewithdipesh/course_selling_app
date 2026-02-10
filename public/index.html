@@ -12,15 +12,15 @@
       <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
       <nav id="navMenu" class="nav-links">
         <a href="#">Categories</a>
-        <a href="#">My Learning</a>
+        <a href="/dashboard.html">Dashboard</a>
         <a href="#">Teach on CourseFlow</a>
       </nav>
       <div class="search-wrap">
-        <input type="text" placeholder="Search for anything" aria-label="Search courses" />
+        <input id="courseSearch" type="text" placeholder="Search for anything" aria-label="Search courses" />
       </div>
       <div class="auth-actions">
-        <button class="ghost-btn">Log in</button>
-        <button class="solid-btn">Sign up</button>
+        <button id="switchLogin" class="ghost-btn">Log in</button>
+        <button id="switchSignup" class="solid-btn">Sign up</button>
       </div>
     </header>
 
@@ -30,6 +30,21 @@
           <h1>Upskill with job-ready courses from top instructors</h1>
           <p>Build practical skills in web development, AI, cloud, and product design with guided learning paths.</p>
           <button class="cta-btn">Start Learning Today</button>
+        </div>
+        <div class="auth-card">
+          <h3 id="authTitle">Create account</h3>
+          <form id="authForm" novalidate>
+            <input id="nameInput" type="text" placeholder="Full name" required />
+            <input id="emailInput" type="email" placeholder="Email" required />
+            <input id="passwordInput" type="password" minlength="6" placeholder="Password" required />
+            <select id="roleInput">
+              <option value="student">Student</option>
+              <option value="instructor">Instructor</option>
+              <option value="admin">Admin</option>
+            </select>
+            <button id="authSubmit" type="submit" class="solid-btn auth-submit">Sign up</button>
+          </form>
+          <p id="authMessage" class="api-message"></p>
         </div>
       </section>
 

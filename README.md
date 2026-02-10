@@ -117,6 +117,7 @@ public/
 
 ### Landing page (`/index.html`)
 - Sticky top navigation with logo, categories, search bar, and login/signup actions.
+- Built-in auth test form (signup/login) that posts to backend auth APIs and stores JWT for dashboard API tests.
 - Hero section with bold headline, supporting copy, and CTA button.
 - Sidebar filters for category, ratings, and max price.
 - Dynamic course card grid with thumbnail, title, instructor, rating stars, and price.
@@ -124,6 +125,7 @@ public/
 
 ### Dashboard (`/dashboard.html`)
 - Enrolled courses view with progress bars and **Continue Learning** actions.
+- CRUD testing panel with Create/Read/Update/Delete buttons wired to `/api/v1/courses` and success/error status messaging.
 - Responsive card layout that stacks on mobile.
 
 ### Design system
