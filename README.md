@@ -137,6 +137,7 @@ public/
 ## Vercel deployment notes
 
 - Serverless handlers are provided in `api/index.js` and `api/[...all].js` to route `/api/*` requests into the Express app.
+- `vercel.json` uses function settings only (no pinned runtime string), avoiding runtime-version validation errors.
 - Database initialization is cached and no longer re-connects per invocation.
 - Use `/healthz` to verify function health after deployment.
 - Ensure `MONGO_URI` and `JWT_SECRET` are set in Vercel project environment variables.
