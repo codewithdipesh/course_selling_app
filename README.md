@@ -100,3 +100,19 @@ npm run dev
   - Student dashboard + instructor analytics dashboard
 - Add optimistic UI for wishlist and progress updates.
 - In Next.js, use API routes or server actions to proxy sensitive calls.
+
+## Frontend (New)
+
+A responsive recruiter-friendly frontend is included under `public/` with modular folders:
+
+```bash
+public/
+  css/
+  js/
+  assets/
+  index.html
+  dashboard.html
+```
+
+- Login page (`/index.html`) includes glowing input borders and clear validation errors.
+- Dashboard page (`/dashboard.html`) includes CRUD action buttons, playful cherry blossom stats panel, and sample PDF download generation.

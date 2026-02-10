@@ -10,10 +10,13 @@ const userRoutes = require('./routes/user.routes');
 const enrollmentRoutes = require('./routes/enrollment.routes');
 const paymentRoutes = require('./routes/payment.routes');
 
+const path = require('path');
+
 const app = express();
 
 app.use(express.json());
 app.use(morgan('dev'));
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
 app.get('/', (req, res) => res.send('Welcome to the Udemy-like Course Selling API'));
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
