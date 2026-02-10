@@ -28,6 +28,7 @@ app.get('/healthz', async (req, res) => {
     db: dbState
   });
 });
+app.get('/', (req, res) => res.send('Welcome to the Udemy-like Course Selling API'));
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use('/api/v1/auth', authRoutes);
